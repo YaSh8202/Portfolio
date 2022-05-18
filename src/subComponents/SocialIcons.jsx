@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { CodeChef, Facebook, Github, LinkedIn } from "../components/AllSvgs";
+import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
   display: flex;
@@ -21,10 +22,11 @@ const Icons = styled.div`
 const Line = styled.span`
   width: 2px;
   height: 8rem;
-  background-color: ${(props) => props.theme.text};
+  background-color: ${(props) =>
+    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `;
 
-function SocialIcons() {
+function SocialIcons(props) {
   return (
     <Icons>
       <div>
@@ -34,40 +36,56 @@ function SocialIcons() {
           href="https://github.com/yash8202"
           target="_blank"
         >
-          <Github width={30} height={25} fill="currentColor" />
+          <Github
+            width={30}
+            height={25}
+            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+          />
         </a>
       </div>
       <div>
-      <a
+        <a
           rel="noreferrer"
           style={{ color: "inherit" }}
           href="https://github.com/yash8202"
           target="_blank"
         >
-          <CodeChef width={30} height={25} fill="currentColor" />
+          <CodeChef
+            width={30}
+            height={25}
+            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+          />
         </a>
       </div>
       <div>
-      <a
+        <a
           rel="noreferrer"
           style={{ color: "inherit" }}
           href="https://github.com/yash8202"
           target="_blank"
         >
-          <Facebook width={30} height={25} fill="currentColor" />
+          <Facebook
+            width={30}
+            height={25}
+            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+          />
         </a>
       </div>
       <div>
-      <a
+        <a
           rel="noreferrer"
           style={{ color: "inherit" }}
           href="https://github.com/yash8202"
           target="_blank"
         >
-          <LinkedIn width={30} height={25} fill="currentColor" />
+          <LinkedIn
+            width={30}
+            height={25}
+            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+          />
         </a>
       </div>
-      <Line />
+      <Line color={props.theme} />
     </Icons>
   );
 }
