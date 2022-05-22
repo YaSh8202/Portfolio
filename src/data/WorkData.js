@@ -1,21 +1,21 @@
 export const Work = [
     {
         id:1,
-        name:"Agency Landing Page",
-        description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-        tags:["react","gsap","styledComponents"],
+        name:"React Meetups",
+        description:"It is build on top of the React JS, with NextJs and MonogoDB Atlas",
+        tags:["react","MongoDB Atlas"],
         
-        demo:"https://agency-website-eta.vercel.app/",
-        github:"https://github.com/codebucks27/Agency-website"
+        demo:"https://nextjs-react-meetups-sepia.vercel.app/",
+        github:"https://github.com/YaSh8202/nextjs-react-meetups"
     },
     {
         id:2,
-        name:"Job listing website",
-        description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-        tags:["react","sass"],
+        name:"EasyBank landing Page",
+        description:"A Bank Page website build in Simple HTML,SASS, JavaScript.",
+        tags:["HTML","Js","sass"],
         
         demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/react-job-listing-website"
+        github:"https://github.com/YaSh8202/react-typeScript-Todo-"
         
     },
     {
@@ -38,11 +38,11 @@ export const Work = [
        
     },{
         id:5,
-        name:"Todo App(React + Redux)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["react","redux","framer-motion"],
+        name:"Todo App(React + TypeScript)",
+        description:"A todo app build using React and TypeScript",
+        tags:["react","TypeScript"],
         
-        demo:"http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
+        demo:"https://react-type-script-todo-pi.vercel.app/",
         github:"https://github.com/codebucks27/React-Redux-Todo-App"
         
     },
