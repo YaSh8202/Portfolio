@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Github } from "../components/AllSvgs";
-import {ExternalLink} from 'react-external-link';
+import {motion } from 'framer-motion';
 
-const Box = styled.li`
+import { Github } from "../components/AllSvgs";
+import { ExternalLink } from "react-external-link";
+
+const Box = styled(motion.li)`
   width: 16rem;
   height: 40vh;
   background-color: ${(props) => props.theme.text};
@@ -75,10 +77,24 @@ const Git = styled(ExternalLink)`
   }
 `;
 
+// Framer motion configuration
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.4,
+    },
+  },
+};
+
 const Card = (props) => {
-  const {name, description, tags, demo, github } = props.data;
+  const { id,name, description, tags, demo, github } = props.data;
   return (
-    <Box>
+    <Box  key={id} variants={Item} >
       <Title>{name}</Title>
       <Description>{description}</Description>
       <Tags>
@@ -87,11 +103,9 @@ const Card = (props) => {
         ))}
       </Tags>
       <Footer>
-        <Link href={demo} >
-          Visit
-        </Link>
-        <Git href={github} >
-          <Github width={30} height={30}  />
+        <Link href={demo}>Visit</Link>
+        <Git href={github}>
+          <Github width={30} height={30} />
         </Git>
       </Footer>
     </Box>
