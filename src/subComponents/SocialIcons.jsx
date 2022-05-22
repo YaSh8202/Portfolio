@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import { CodeChef, Facebook, Github, LinkedIn } from "../components/AllSvgs";
@@ -19,7 +20,7 @@ const Icons = styled.div`
   }
 `;
 
-const Line = styled.span`
+const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
   background-color: ${(props) =>
@@ -29,7 +30,11 @@ const Line = styled.span`
 function SocialIcons(props) {
   return (
     <Icons>
-      <div>
+      <motion.div
+        initial={{ transform: "scale(0)" }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1 }}
+      >
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
@@ -42,8 +47,12 @@ function SocialIcons(props) {
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+      initial={{ transform: "scale(0)" }}
+      animate={{ scale: [0, 1, 1.5, 1] }}
+      transition={{ type: "spring", duration: 1, delay: 1.2 }}
+      >
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
@@ -56,8 +65,12 @@ function SocialIcons(props) {
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+      initial={{ transform: "scale(0)" }}
+      animate={{ scale: [0, 1, 1.5, 1] }}
+      transition={{ type: "spring", duration: 1, delay: 1.4 }}
+      >
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
@@ -70,8 +83,12 @@ function SocialIcons(props) {
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+      initial={{ transform: "scale(0)" }}
+      animate={{ scale: [0, 1, 1.5, 1] }}
+      transition={{ type: "spring", duration: 1, delay: 1.6 }}
+      >
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
@@ -84,8 +101,13 @@ function SocialIcons(props) {
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
-      </div>
-      <Line color={props.theme} />
+      </motion.div>
+      <Line
+        initial={{ height: 0 }}
+        animate={{ height: "8rem" }}
+        transition={{ duration: 1, delay: 0.8 }}
+        color={props.theme}
+      />
     </Icons>
   );
 }
