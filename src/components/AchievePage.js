@@ -4,7 +4,7 @@ import bgImg from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { Blogs } from "../data/BlogData";
+import { Achieve } from "../data/AchieveData";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
@@ -52,7 +52,7 @@ const container = {
   },
 };
 
-const BlogPage = () => {
+const AchievePage = () => {
   const [numbers, setNumbers] = useState(0);
 
   useEffect(() => {
@@ -77,15 +77,15 @@ const BlogPage = () => {
         <AnchorComponent numbers={numbers} />
         <Center>
           <Grid>
-            {Blogs.map((blog) => {
+            {Achieve.map((blog) => {
               return <BlogComponent key={blog.id} blog={blog} />;
             })}
           </Grid>
         </Center>
-        <BigTitle left="5rem" top="5rem" text="blog" />
+        <BigTitle left="5rem" top="5rem" text="Achievements" />
       </Container>
     </MainContainer>
   );
 };
 
-export default BlogPage;
+export default AchievePage;

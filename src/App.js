@@ -5,7 +5,7 @@ import GlobalStyle from "./globalStyles";
 import {AnimatePresence} from 'framer-motion';
 // Components
 import AboutPage from "./components/AboutPage";
-import BlogPage from "./components/BlogPage";
+import AchievePage from "./components/AchievePage";
 import Main from "./components/Main";
 import MySkillsPage from "./components/MySkillsPage";
 import WorkPage from "./components/WorkPage";
@@ -21,7 +21,7 @@ function App() {
           <Routes location={location} key={location.pathname} >
             <Route exact path="/" element={<Main />} />
             <Route exact path="/about" element={<AboutPage />} />
-            <Route exact path="/blog" element={<BlogPage />} />
+            <Route exact path="/blog" element={<AchievePage />} />
             <Route exact path="/work" element={<WorkPage />} />
             <Route exact path="/skills" element={<MySkillsPage />} />
           </Routes>

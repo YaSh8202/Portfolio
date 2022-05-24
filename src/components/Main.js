@@ -42,8 +42,8 @@ const Contact = styled.a`
 const BLOG = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
-  top: 50%;
-  right: calc(1rem + 2vw);
+  top: 60%;
+  right: 1px;
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
@@ -179,7 +179,7 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Blog
+            Achievements
           </motion.h2>
         </BLOG>
         <WORK click={click} to="/work">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { CodeChef, Facebook, Github, LinkedIn } from "../components/AllSvgs";
+import { CodeChef, Codeforces, Github, LinkedIn } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -56,16 +56,18 @@ function SocialIcons(props) {
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
-          href="https://github.com/yash8202"
+          href="https://www.linkedin.com/in/yash-bajaj-b6a525235/"
           target="_blank"
         >
-          <CodeChef
+          <LinkedIn
             width={30}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>
+      
+      
       <motion.div
       initial={{ transform: "scale(0)" }}
       animate={{ scale: [0, 1, 1.5, 1] }}
@@ -74,16 +76,17 @@ function SocialIcons(props) {
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
-          href="https://github.com/yash8202"
+          href="https://codeforces.com/profile/codefYash"
           target="_blank"
         >
-          <Facebook
+          <Codeforces
             width={30}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>
+      {/* CodeChef */}
       <motion.div
       initial={{ transform: "scale(0)" }}
       animate={{ scale: [0, 1, 1.5, 1] }}
@@ -92,10 +95,10 @@ function SocialIcons(props) {
         <a
           rel="noreferrer"
           style={{ color: "inherit" }}
-          href="https://github.com/yash8202"
+          href="https://www.codechef.com/users/yashb1010"
           target="_blank"
         >
-          <LinkedIn
+          <CodeChef
             width={30}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
@@ -108,6 +111,7 @@ function SocialIcons(props) {
         transition={{ duration: 1, delay: 0.8 }}
         color={props.theme}
       />
+      
     </Icons>
   );
 }
