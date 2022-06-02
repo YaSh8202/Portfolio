@@ -5,10 +5,10 @@ import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { Achieve } from "../data/AchieveData";
-import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
+import Achievement from "./Achievement";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${bgImg});
@@ -77,8 +77,8 @@ const AchievePage = () => {
         <AnchorComponent numbers={numbers} />
         <Center>
           <Grid>
-            {Achieve.map((blog) => {
-              return <BlogComponent key={blog.id} blog={blog} />;
+            {Achieve.map((a) => {
+              return <Achievement key={a.id} achievement={a} />;
             })}
           </Grid>
         </Center>

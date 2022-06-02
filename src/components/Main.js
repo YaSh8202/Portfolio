@@ -39,11 +39,11 @@ const Contact = styled.a`
   z-index: 1;
 `;
 
-const BLOG = styled(NavLink)`
+const ACHIEVEMENTS = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 60%;
-  right: 1px;
+  right: -10px;
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
@@ -166,7 +166,7 @@ const Main = () => {
             Say hi...
           </motion.h2>
         </Contact>
-        <BLOG to="/blog">
+        <ACHIEVEMENTS to="/achievements">
           <motion.h2
             initial={{
               y: -200,
@@ -181,7 +181,7 @@ const Main = () => {
           >
             Achievements
           </motion.h2>
-        </BLOG>
+        </ACHIEVEMENTS>
         <WORK click={click} to="/work">
           <motion.h2
             initial={{

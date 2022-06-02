@@ -76,8 +76,8 @@ const Date = styled.span`
 
 const Container = styled(motion.div)``;
 
-const BlogComponent = (props) => {
-  const { name, tags, date, imgSrc, link } = props.blog;
+const Achievement = (props) => {
+  const { name, tags, date, imgSrc, link } = props.achievement;
   return (
     <Container
     variants={Item}
@@ -96,4 +96,4 @@ const BlogComponent = (props) => {
   );
 };
 
-export default BlogComponent;
+export default Achievement;

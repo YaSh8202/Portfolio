@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from "./Themes";
-import { Design, Develope } from "./AllSvgs";
+import { Design, Develope, Solution } from "./AllSvgs";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
@@ -61,7 +61,7 @@ const Description = styled.div`
   padding: 0.5rem 0;
 
   ${Main}:hover & {
-      color: ${props=>props.theme.body};
+    color: ${(props) => props.theme.body};
   }
 
   strong {
@@ -72,7 +72,6 @@ const Description = styled.div`
   p {
     margin-left: 2rem;
   }
-
 `;
 
 const MySkillsPage = () => {
@@ -85,22 +84,24 @@ const MySkillsPage = () => {
         <ParticleComponent theme="light" />
         <Main>
           <Title>
-            <Design width={40} height={40} /> Designer
+            <Solution width={40} height={40} /> Problem Solver
           </Title>
           <Description>
-            I love to create design which speaks, Keep it clean, minimal and
-            simple.
+            I'm passionate about competitive programming as it helps to increase
+            our problem solving skills and helps us bring codes into real worls
+            practice. 
           </Description>
-          <Description>
+          {/* <Description>
             <strong>I like to Design</strong>
             <ul>
               <li>Web Design</li>
             </ul>
-          </Description>
+          </Description> */}
           <Description>
-            <strong>Tools</strong>
+            <strong>SKILLS</strong>
             <ul>
-              <li>Figma</li>
+              <li>C++</li>
+              <li>Python</li>
             </ul>
           </Description>
         </Main>
