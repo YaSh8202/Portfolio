@@ -28,12 +28,13 @@ const Image = styled.div`
   background-image: ${(props) => `url(${props.img})`};
   width: 100%;
   height: 60%;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: ${(props) => (props.size ? props.size : "cover")};
   border: 1px solid transparent;
   background-position: center center;
 
-  ${Box}:hover &{
-    border:1px solid  ${(props) => props.theme.body}; 
+  ${Box}:hover & {
+    border: 1px solid ${(props) => props.theme.body};
   }
 `;
 
@@ -44,8 +45,8 @@ const Title = styled.h3`
   font-family: "Karla", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
-  ${Box}:hover &{
-    border-bottom:1px solid  ${(props) => props.theme.body}; 
+  ${Box}:hover & {
+    border-bottom: 1px solid ${(props) => props.theme.body};
   }
 `;
 
@@ -77,21 +78,19 @@ const Date = styled.span`
 const Container = styled(motion.div)``;
 
 const Achievement = (props) => {
-  const { name, tags, date, imgSrc, link } = props.achievement;
+  const { name, tags, date, imgSrc, link, size } = props.achievement;
   return (
-    <Container
-    variants={Item}
-    >
+    <Container variants={Item}>
       <Box target="_blank" href={link}>
-      <Image img={imgSrc} />
-      <Title>{name}</Title>
-      <HashTags>
-        {tags.map((t, id) => {
-          return <Tag key={id}>#{t}</Tag>;
-        })}
-      </HashTags>
-      <Date>{date}</Date>
-    </Box>
+        <Image size={size} img={imgSrc} />
+        <Title>{name}</Title>
+        <HashTags>
+          {tags.map((t, id) => {
+            return <Tag key={id}>#{t}</Tag>;
+          })}
+        </HashTags>
+        <Date>{date}</Date>
+      </Box>
     </Container>
   );
 };
