@@ -1,61 +1,41 @@
 export const Work = [
   {
-    id: 1,
-    name: "Twitter2.o Clone",
+    id: 4,
+    name: "Code Crafters",
     description:
-      "A clone of Twitter build using NextJs + TypeScript. With realtime fetching of tweets and comments from sanity CMS using API.",
-    tags: ["react", "NextJs", "TypeScript", "Tailwind", "Sanity"],
-
-    demo: "https://twitter2-o-clone.vercel.app/",
-    github: "https://github.com/YaSh8202/twitter2.o-clone",
+      `Code Crafters is a web application that allows users to improve their technology skills by completing challenges and submitting solutions. The platform also allows users to create and share their own challenges, making it a collaborative learning tool. `,
+    tags: ["Next.js", "Typescript", "Prisma", "PostreSQL", "tRPC", "Tailwind"],
+    demo: "https://code-crafters.vercel.app/",
+    github: "https://github.com/YaSh8202/code-crafters",
   },
+
   {
     id: 2,
-    name: "React Meetups",
+    name: "Monkey Type Clone",
     description:
-      "It is build on top of the ReactJs, with NextJs and MonogoDB Atlas",
-    tags: ["react", "MongoDB Atlas"],
-
-    demo: "https://nextjs-react-meetups-sepia.vercel.app/",
-    github: "https://github.com/YaSh8202/nextjs-react-meetups",
-  },
-  {
-    id: 4,
-    name: "React Meals",
-    description:
-      "A Food Ordering site build using ReactJS and CSS.",
-    tags: ["react", "css"],
-
-    demo: "https://react-meals101.netlify.app/",
-    github: "https://github.com/YaSh8202/react-food-order-app",
-  },
-  {
-    id: 5,
-    name: "Todo App(React + TypeScript)",
-    description: "A todo app build using React and TypeScript",
-    tags: ["react", "TypeScript"],
-
-    demo: "https://react-type-script-todo-pi.vercel.app/",
-    github: "https://github.com/codebucks27/React-Redux-Todo-App",
-  },
-  {
-    id: 6,
-    name: "Pomodoro-timer",
-    description:
-      "A pomodoroTimer component in ReactJS. Built from scratch.",
-    tags: ["react", "css"],
-
-    demo: "https://pomodoro-timer-yash8202.vercel.app/",
-    github: "https://github.com/YaSh8202/pomodoro-timer",
+      `The Monkey Type Clone project is a typing website that allows users to test their typing speed with various modes such as punctuation, numbers, time, words, and quotes. It features multiple themes and incorporates Google OAuth and one-tap login for a seamless user experience. `,
+    tags: ["React", "Material UI", "Firebase", "Redux"],
+    demo: "hhttps://react-monkey-type.vercel.app/",
+    github: "https://github.com/YaSh8202/react-monkey-type",
   },
   {
     id: 3,
-    name: "EasyBank landing Page",
-    description: "A Bank Page website build in Simple HTML,SASS, JavaScript.",
-    tags: ["HTML", "Js", "sass"],
-
-    demo: "https://easybank-project.herokuapp.com/",
-    github: "https://github.com/YaSh8202/EasyBank-Project",
+    name: "Kanban 13",
+    description:
+      `Kanban13 is a task management app built with TypeScript and Nextjs13, using Redis as the database, Tailwind CSS for styling, and Next-Auth for authentication. It offers board, column, and task management features with the ability to switch between light and dark modes for improved user experience.`,
+    tags: ["NextJs", "Tailwind", "Redis", "Next-Auth"],
+    demo: "https://kanban13.vercel.app/",
+    github: "https://github.com/YaSh8202/kanban-task-management-next13",
   },
+  {
+    id: 1,
+    name: "Tech Stack - Community Chat App",
+    description:
+      `The project is a community chat application designed for developers and programmers. It uses React, Firebase, and Tailwind, and features a knowledge-sharing function where users can ask questions and share information through markdown and multimedia. The app uses Google and Github OAuth for user authentication and integrates OpenAI API for answering technical questions.`,
+    tags: ["react", "NextJs", "Tailwind", "Firebase"],
+    demo: "http://techstack-iota.vercel.app/",
+    github: "https://github.com/YaSh8202/Tech-Stack",
+  },
+
 
 ];

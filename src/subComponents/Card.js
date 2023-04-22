@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import {motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { Github } from "../components/AllSvgs";
 import { ExternalLink } from "react-external-link";
 
 const Box = styled(motion.li)`
-  width: 16rem;
-  height: 40vh;
+  width: 18rem;
+  height: 50vh;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
   padding: 1.5rem 2rem;
@@ -15,9 +15,8 @@ const Box = styled(motion.li)`
   border-radius: 0 50px 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 1px solid ${(props) => props.theme.body};
-
+  transition: all 0.3s ease-in-out;
   &:hover {
     background-color: ${(props) => props.theme.body};
     color: ${(props) => props.theme.text};
@@ -33,6 +32,12 @@ const Description = styled.h2`
   font-size: calc(0.8em + 0.3vw);
   font-family: "Karla", sans-serif;
   font-weight: 500;
+  flex: 1;
+  overflow: auto;
+  margin-top: 0.5rem;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;
 
 const Tags = styled.div`
@@ -64,7 +69,8 @@ const Link = styled(ExternalLink)`
   ${Box}:hover & {
     background-color: ${(props) => props.theme.text};
     color: ${(props) => props.theme.body};
-  }
+  };
+
 `;
 
 const Git = styled(ExternalLink)`
@@ -92,9 +98,9 @@ const Item = {
 };
 
 const Card = (props) => {
-  const { id,name, description, tags, demo, github } = props.data;
+  const { id, name, description, tags, demo, github } = props.data;
   return (
-    <Box  key={id} variants={Item} >
+    <Box key={id} variants={Item} >
       <Title>{name}</Title>
       <Description>{description}</Description>
       <Tags>
